@@ -407,6 +407,11 @@
     min-width: 150px;
     white-space: normal;
   }
+  
+  .rates-table th:nth-child(2),
+  .rates-table td:nth-child(2) {
+    display: none;
+  }
 
   .rates-table th {
     background-color: var(--navy-blue);
