@@ -263,17 +263,46 @@
     background-color: var(--light-gray);
   }
   
+  .container-fluid {
+    max-width: 1600px;
+    padding: 0 2rem;
+    margin: 0 auto;
+  }
+
   .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     padding: 1rem;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 1600px) {
+    .container-fluid {
+      padding: 0 4rem;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .container-fluid {
+      padding: 0 3rem;
+    }
   }
 
   @media (max-width: 768px) {
+    .container-fluid {
+      padding: 0 2rem;
+    }
     .services-grid {
       grid-template-columns: 1fr;
       gap: 1.5rem;
+      padding: 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .container-fluid {
+      padding: 0 1rem;
     }
   }
   
