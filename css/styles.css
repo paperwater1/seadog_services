@@ -388,15 +388,14 @@
 
   /* Services Rates Table */
   .rates-table {
-    width: 100vw;
-    margin-left: -1rem;
-    margin-right: -1rem;
+    width: 100%;
     border-collapse: collapse;
     background: white;
     border-radius: 0;
     overflow-x: auto;
     display: block;
     box-shadow: none;
+    margin: 0;
   }
 
   .rates-table th,
@@ -441,10 +440,14 @@
   
   /* Services detail section (same class as on maritime/community) */
   .services-detail {
-    padding: 2rem 1rem;
+    padding: 2rem 0;
     background-color: var(--light-gray);
     width: 100%;
     overflow: hidden;
+  }
+
+  .rates-container {
+    padding: 0 1rem;
   }
 
   .section-title {
