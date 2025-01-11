@@ -388,14 +388,14 @@
 
   /* Services Rates Table */
   .rates-table {
-    width: 100%;
-    min-width: 100%;
+    width: 70%;
+    min-width: 70%;
     border-collapse: collapse;
     background: white;
     border-radius: 12px;
     display: table;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    margin: 0 auto;
+    margin: 2rem auto;
     overflow: hidden;
   }
 
@@ -433,7 +433,7 @@
       padding: 0 1rem;
     }
     .rates-table {
-      width: 100%;
+      width: 80%;
       max-width: 1000px;
       margin: 3rem auto;
       border-radius: 12px;
