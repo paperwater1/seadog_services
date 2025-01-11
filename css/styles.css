@@ -446,13 +446,25 @@
     background-color: var(--light-gray);
     width: 100%;
     overflow: hidden;
+    position: relative;
+  }
+
+  .services-detail::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100vw;
+    right: -100vw;
+    bottom: 0;
+    background-color: var(--light-gray);
+    z-index: -1;
   }
 
   .rates-container {
     width: 100%;
     overflow-x: auto;
-    padding: 0;
-    margin: 0 -1rem;
+    padding: 0 1rem;
+    margin: 0 auto;
   }
 
   .section-title {
