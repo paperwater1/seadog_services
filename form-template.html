@@ -1,0 +1,37 @@
+<section class="contact-form-section" id="contact-section">
+    <div class="container">
+      <h2>Contact SEADOG</h2>
+      <!-- Replace YOUR_FORM_ID with the form ID from your Formspree account -->
+      <form action="https://formspree.io/f/mzzzyker" method="POST">
+        <div class="form-group">
+          <label for="name">Name *</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="service">Service *</label>
+          <select id="service" name="service" required>
+            <option value="">Select a Service</option>
+            <!-- Maritime Services -->
+            <option value="Corporate Training">Corporate Training</option>
+            <option value="Safety Advisory">Safety Advisory</option>
+            <option value="Pollution Prevention">Pollution Prevention</option>
+            <option value="Operations Optimization">Operations Optimization</option>
+            <!-- Community Services -->
+            <option value="Election Inspector Services">Election Inspector Services</option>
+            <option value="Association Consulting">Association Consulting</option>
+            <option value="Notary Services">Notary Services</option>
+            <option value="Community Engagement">Community Engagement</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="inquiry">Message *</label>
+          <textarea id="inquiry" name="message" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </section>
