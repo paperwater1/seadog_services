@@ -307,12 +307,18 @@
 
   @media (max-width: 768px) {
     .container-fluid {
-      padding: 0 2rem;
+      padding: 0 1rem;
     }
     .services-grid {
       grid-template-columns: 1fr;
       gap: 1.5rem;
       padding: 0;
+      margin: 0;
+    }
+    .service-preview,
+    .service-card {
+      border-radius: 0;
+      padding: 1.5rem 1rem;
     }
   }
 
