@@ -395,7 +395,7 @@
     border-radius: 12px;
     display: table;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    margin: 0 2rem;
+    margin: 0 auto;
     overflow: hidden;
   }
 
@@ -435,7 +435,7 @@
     .rates-table {
       width: 100%;
       max-width: 1000px;
-      margin: 3rem 4rem;
+      margin: 3rem auto;
       border-radius: 12px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     }
