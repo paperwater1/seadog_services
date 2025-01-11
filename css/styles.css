@@ -103,6 +103,21 @@
     padding: 2rem 1rem;
     text-align: center;
   }
+
+  .compact-hero {
+    min-height: 20vh;
+    padding: 1.5rem 1rem;
+  }
+
+  .compact-hero h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .compact-hero .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
   
   #hero {
     /* changed from 100vh -> something smaller to reduce scrolling on mobile */
