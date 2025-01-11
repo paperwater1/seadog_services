@@ -555,7 +555,7 @@
   .section-title {
     color: var(--navy-blue);
     font-size: 2rem;
-    margin-bottom: 2rem;
+    margin: 2rem 0 2rem 0;
     text-align: center;
   }
   

@@ -1,22 +1,48 @@
-// Function to load and inject the contact form
-async function loadContactForm() {
-    try {
-        const response = await fetch('/form-template.html');
-        const html = await response.text();
-        const tempDiv = document.createElement('div');
-        tempDiv.innerHTML = html;
-        const formSection = tempDiv.querySelector('.contact-form-section');
-        
-        const contactSection = document.getElementById('contact-section');
-        if (contactSection && formSection) {
-            contactSection.innerHTML = formSection.innerHTML;
-            // Re-initialize form functionality after loading
-            populateServiceDropdown();
-            initializeFormHandling();
-        }
-    } catch (error) {
-        console.error('Error loading contact form:', error);
-    }
+// Function to initialize the contact form
+function loadContactForm() {
+    const contactSection = document.getElementById('contact-section');
+    if (!contactSection) return;
+    
+    // Initialize form functionality
+    populateServiceDropdown();
+    initializeFormHandling();
+}
+
+// Function to initialize form handling
+function initializeFormHandling() {
+    const forms = document.querySelectorAll('form[action^="https://formspree.io"]');
+    forms.forEach(form => {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    const contactSection = document.querySelector('.contact-form-section');
+                    if (contactSection) {
+                        contactSection.innerHTML = `
+                            <div class="container">
+                                <div class="thank-you-message">
+                                    <h2>Thank you for reaching out!</h2>
+                                    <p>We'll be in touch soon.</p>
+                                </div>
+                            </div>`;
+                    }
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error sending your message. Please try again.');
+            });
+        });
+    });
 }
 
 // Smooth scrolling for navigation links
@@ -104,47 +130,6 @@ document.addEventListener('DOMContentLoaded', function() {
     loadContactForm();
     
     // Other initializations will happen after form is loaded
-});
-
-// Initialize form handling on page load
-document.addEventListener('DOMContentLoaded', function() {
-    // Initialize all service dropdowns
-    populateServiceDropdown();
-    
-    // Handle form submissions
-    const forms = document.querySelectorAll('form[action^="https://formspree.io"]');
-    forms.forEach(form => {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            fetch(form.action, {
-                method: 'POST',
-                body: new FormData(form),
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.ok) {
-                    const contactSection = document.querySelector('.contact-form-section');
-                    if (contactSection) {
-                        contactSection.innerHTML = `
-                            <div class="container">
-                                <div class="thank-you-message">
-                                    <h2>Thank you for reaching out!</h2>
-                                    <p>We'll be in touch soon.</p>
-                                </div>
-                            </div>`;
-                    }
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('There was an error sending your message. Please try again.');
-            });
-        });
-    });
 });
 
 // Simple form validation
