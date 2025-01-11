@@ -29,7 +29,7 @@
     <section id="maritime-services" class="services-detail">
       <div class="container service-container">
         <div class="services-grid">
-          <div class="service-card">
+          <div class="service-card" onclick="selectService('Corporate Training')">
             <i class="fas fa-ship"></i>
             <h3>Corporate Training</h3>
             <p>Comprehensive training programs tailored to your maritime operations, ensuring compliance and operational excellence.</p>
@@ -41,7 +41,7 @@
             </ul>
           </div>
 
-          <div class="service-card">
+          <div class="service-card" onclick="selectService('Safety Advisory')">
             <i class="fas fa-shield-alt"></i>
             <h3>Safety Advisory</h3>
             <p>Expert guidance on maritime safety protocols and risk management strategies.</p>
@@ -53,7 +53,7 @@
             </ul>
           </div>
 
-          <div class="service-card">
+          <div class="service-card" onclick="selectService('Pollution Prevention')">
             <i class="fas fa-water"></i>
             <h3>Pollution Prevention</h3>
             <p>Environmental protection strategies and compliance management for maritime operations.</p>
@@ -65,7 +65,7 @@
             </ul>
           </div>
 
-          <div class="service-card">
+          <div class="service-card" onclick="selectService('Operations Optimization')">
             <i class="fas fa-chart-line"></i>
             <h3>Operations Optimization</h3>
             <p>Streamline your maritime operations for maximum efficiency and profitability.</p>
@@ -117,37 +117,35 @@
       </div>
     </section>
 
-    <section class="contact-form-section">
+    <section class="contact-form-section" id="contact-section">
       <div class="container">
-        <iframe 
-          data-tally-src="https://tally.so/embed/nrG2M5?transparentBackground=1&dynamicHeight=1&alignLeft1" 
-          loading="lazy" 
-          width="100%" 
-          height="476" 
-          frameborder="0" 
-          marginheight="0" 
-          marginwidth="0" 
-          title="Contact SEADOG">
-        </iframe>
-        <script>
-          var d=document,w="https://tally.so/widgets/embed.js",
-          v=function(){
-            if(typeof Tally!="undefined"){Tally.loadEmbeds();}
-            else {
-              d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e){
-                e.src=e.dataset.tallySrc;
-              });
-            }
-          };
-          if(typeof Tally!="undefined") v();
-          else if(d.querySelector('script[src="'+w+'"]')==null){
-            var s=d.createElement("script");
-            s.src=w;
-            s.onload=v;
-            s.onerror=v;
-            d.body.appendChild(s);
-          }
-        </script>
+        <h2>Contact SEADOG</h2>
+        <!-- Replace YOUR_FORM_ID with the form ID from your Formspree account -->
+        <form action="https://formspree.io/f/mzzzyker" method="POST">
+          <div class="form-group">
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="service">Service *</label>
+            <select id="service" name="service" required>
+              <option value="">Select a Service</option>
+              <option value="Corporate Training">Corporate Training</option>
+              <option value="Safety Advisory">Safety Advisory</option>
+              <option value="Pollution Prevention">Pollution Prevention</option>
+              <option value="Operations Optimization">Operations Optimization</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="inquiry">Message *</label>
+            <textarea id="inquiry" name="message" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
       </div>
     </section>
   </main>

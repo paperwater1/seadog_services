@@ -29,7 +29,7 @@
     background: var(--navy-blue);
   }
   
-  /* Header: not pinned absolute so it won't overlap hero sections on small screens. */
+  /* Header: not pinned absolute so it won’t overlap hero sections on small screens. */
   .page-header {
     position: relative;
     top: 0;
@@ -412,6 +412,59 @@
     transform: translateY(-5px);
   }
 
+  /* Service Card Hover Effects */
+  .service-card {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Service blocks clickable styling */
+  .service-block {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .service-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Dropdown styling */
+  .form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid var(--light-blue);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
+  }
+
+  .form-group select:focus {
+    outline: none;
+    border-color: var(--navy-gold);
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .form-group select option {
+    background-color: var(--navy-blue);
+    color: white;
+  }
+
   /* Services Rates Table */
   .rates-table {
     width: 70%;
@@ -515,8 +568,37 @@
   .contact-form-section {
     background: linear-gradient(180deg, #003366 0%, #004080 100%);
     padding: 3rem 1rem 3rem 2rem;
+    position: relative;
+    min-height: 600px;  /* Adjust this value based on your form's typical height */
+    display: flex;
+    align-items: center;
   }
-  
+
+  .contact-form-section .container {
+    position: relative;
+    width: 100%;
+  }
+
+  .contact-form-section iframe {
+    position: relative;
+  }
+
+  .contact-form-section iframe::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 150px;
+    height: 40px;
+    background-color: var(--navy-blue);
+    z-index: 1000;
+  }
+
+  /* Create a container for the iframe to handle the overlay */
+  .contact-form-section .container {
+    position: relative;
+  }
+
   .contact-heading {
     color: #fff;
     text-align: center;
@@ -524,6 +606,117 @@
     font-size: 2rem;
   }
   
+  /* Contact Form Styles */
+  .contact-form-section {
+    padding: 4rem 1rem;
+    background: linear-gradient(180deg, #003366 0%, #004080 100%);
+  }
+
+  .contact-form-section .container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .contact-form-section h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group label {
+    display: block;
+    color: var(--light-blue);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid var(--light-blue);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  .form-group textarea {
+    font-family: inherit;
+    font-size: inherit;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--navy-gold);
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+  }
+
+  .submit-btn {
+    background: var(--navy-gold);
+    color: var(--navy-blue);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+
+  .submit-btn:hover {
+    background: #ffd900;
+    transform: translateY(-2px);
+  }
+
+  .submit-btn:active {
+    transform: translateY(0);
+  }
+
+  /* Form placeholder styles */
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .contact-form-section {
+      padding: 3rem 1rem;
+    }
+  
+    .contact-form-section h2 {
+      font-size: 1.8rem;
+    }
+  
+    .form-group label {
+      font-size: 1rem;
+    }
+  
+    .submit-btn {
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+    }
+  }
+
+  .contact-form-section .thank-you-message {
+    text-align: center;
+    padding: 40px 0;
+  }
+
   /* Footer styling to match site theme */
   footer {
     background-color: #002b5c; /* slightly deeper navy if you like */

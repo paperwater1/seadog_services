@@ -65,38 +65,41 @@
       </div>
     </section>
 
-    <!-- Replacing the old contact form with the Tally embed -->
-    <section class="contact-form-section">
+    <section class="contact-form-section" id="contact-section">
       <div class="container">
-        <iframe 
-          data-tally-src="https://tally.so/embed/nrG2M5?transparentBackground=1&dynamicHeight=1&alignLeft1" 
-          loading="lazy" 
-          width="100%" 
-          height="476" 
-          frameborder="0" 
-          marginheight="0" 
-          marginwidth="0" 
-          title="Contact SEADOG">
-        </iframe>
-        <script>
-          var d=document,w="https://tally.so/widgets/embed.js",
-          v=function(){
-            if(typeof Tally!="undefined"){Tally.loadEmbeds();}
-            else {
-              d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e){
-                e.src=e.dataset.tallySrc;
-              });
-            }
-          };
-          if(typeof Tally!="undefined") v();
-          else if(d.querySelector('script[src="'+w+'"]')==null){
-            var s=d.createElement("script");
-            s.src=w;
-            s.onload=v;
-            s.onerror=v;
-            d.body.appendChild(s);
-          }
-        </script>
+        <h2>Contact SEADOG</h2>
+        <!-- Replace YOUR_FORM_ID with the form ID from your Formspree account -->
+        <form action="https://formspree.io/f/mzzzyker" method="POST">
+          <div class="form-group">
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="service">Service *</label>
+            <select id="service" name="service" required>
+              <option value="">Select a Service</option>
+              <!-- Maritime Services -->
+              <option value="Corporate Training">Corporate Training</option>
+              <option value="Safety Advisory">Safety Advisory</option>
+              <option value="Pollution Prevention">Pollution Prevention</option>
+              <option value="Operations Optimization">Operations Optimization</option>
+              <!-- Community Services -->
+              <option value="Election Inspector Services">Election Inspector Services</option>
+              <option value="Association Consulting">Association Consulting</option>
+              <option value="Notary Services">Notary Services</option>
+              <option value="Community Engagement">Community Engagement</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="inquiry">Message *</label>
+            <textarea id="inquiry" name="message" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
       </div>
     </section>
   </main>
