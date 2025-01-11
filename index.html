@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Removed user-scalable=no for better accessibility, 
+       but you can put it back if absolutely necessary -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sea Dog Service - Maritime & Community Services</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header (Optional) 
+       If you don't want a header on the index page, feel free to remove -->
+  <header class="page-header">
+    <!-- No “Back to Home” button needed here by default, but you could add links if you like -->
+    <img src="images/logo-placeholder.png" alt="Sea Dog Service Logo" class="page-logo">
+  </header>
+
+  <main>
+    <section id="hero">
+      <div class="hero-content">
+        <div class="logo-container">
+          <!-- If you only want one logo, you can remove this extra one. Or keep it for the big hero effect. -->
+          <img src="images/logo-placeholder.png" alt="Sea Dog Service Logo" class="main-logo">
+        </div>
+        <h1>Professional Maritime & Community Services</h1>
+        <p class="hero-subtitle">Expert consulting for maritime industry and community associations</p>
+        <div class="hero-buttons">
+          <a href="maritime.html" class="btn btn-primary">Maritime Services</a>
+          <a href="community.html" class="btn btn-primary">Community Services</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="services-overview">
+      <div class="container">
+        <div class="services-grid">
+          <div class="service-preview maritime">
+            <h2>Maritime Services</h2>
+            <p>Professional maritime consulting and training services to enhance safety and efficiency in maritime operations.</p>
+            <ul>
+              <li>Comprehensive Corporate Training Programs</li>
+              <li>Maritime Safety Compliance & Advisory</li>
+              <li>Environmental Protection & Pollution Prevention</li>
+              <li>Vessel Operations Optimization</li>
+              <li>Risk Assessment & Management</li>
+            </ul>
+            <a href="maritime.html" class="btn">Explore Maritime Services</a>
+          </div>
+          <div class="service-preview community">
+            <h2>Community Services</h2>
+            <p>Dedicated community support services to strengthen local governance and facilitate civic engagement.</p>
+            <ul>
+              <li>Professional Election Inspector Services</li>
+              <li>HOA & Community Association Consulting</li>
+              <li>Certified Notary Public Services</li>
+              <li>Community Event Planning & Coordination</li>
+              <li>Local Government Liaison Services</li>
+            </ul>
+            <a href="community.html" class="btn">Explore Community Services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Replacing the old contact form with the Tally embed -->
+    <section class="contact-form-section">
+      <div class="container">
+        <h2 class="contact-heading">Contact Us</h2>
+        <iframe 
+          data-tally-src="https://tally.so/embed/nrG2M5?transparentBackground=1&dynamicHeight=1&alignLeft1" 
+          loading="lazy" 
+          width="100%" 
+          height="476" 
+          frameborder="0" 
+          marginheight="0" 
+          marginwidth="0" 
+          title="Contact SEADOG">
+        </iframe>
+        <script>
+          var d=document,w="https://tally.so/widgets/embed.js",
+          v=function(){
+            if(typeof Tally!="undefined"){Tally.loadEmbeds();}
+            else {
+              d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e){
+                e.src=e.dataset.tallySrc;
+              });
+            }
+          };
+          if(typeof Tally!="undefined") v();
+          else if(d.querySelector('script[src="'+w+'"]')==null){
+            var s=d.createElement("script");
+            s.src=w;
+            s.onload=v;
+            s.onerror=v;
+            d.body.appendChild(s);
+          }
+        </script>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Sea Dog Service</h4>
+          <p>[Your company description]</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="maritime.html">Maritime Services</a></li>
+            <li><a href="community.html">Community Services</a></li>
+            <li><a href="https://blog.seadogservice.com">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <p>[Your contact information]</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Sea Dog Service. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

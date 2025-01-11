@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- For better mobile handling -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maritime Services - Sea Dog Service</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Stacked header elements to avoid collisions on small screens -->
+  <header class="page-header">
+    <div class="header-top">
+      <a href="index.html" class="btn btn-primary back-home">Back to Home</a>
+    </div>
+    <img src="images/logo-placeholder.png" alt="Sea Dog Service" class="page-logo">
+  </header>
+
+  <main>
+    <!-- Reduced the margin-top so it’s not too large on mobile, but enough to clear the header -->
+    <section id="maritime-hero" class="page-hero" style="margin-top: 3rem;">
+      <div class="hero-content">
+        <h1>Maritime Services</h1>
+        <p class="hero-subtitle">Professional maritime consulting and training services</p>
+      </div>
+    </section>
+
+    <section id="maritime-services" class="services-detail">
+      <div class="container">
+        <div class="services-grid">
+          <div class="service-card">
+            <i class="fas fa-ship"></i>
+            <h3>Corporate Training</h3>
+            <p>Comprehensive training programs tailored to your maritime operations, ensuring compliance and operational excellence.</p>
+            <ul>
+              <li>Safety Management Systems</li>
+              <li>Emergency Response Procedures</li>
+              <li>Crew Resource Management</li>
+              <li>Maritime Regulations Compliance</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Safety Advisory</h3>
+            <p>Expert guidance on maritime safety protocols and risk management strategies.</p>
+            <ul>
+              <li>Risk Assessment & Mitigation</li>
+              <li>Safety Audits & Inspections</li>
+              <li>Incident Investigation</li>
+              <li>Safety Culture Development</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <i class="fas fa-water"></i>
+            <h3>Pollution Prevention</h3>
+            <p>Environmental protection strategies and compliance management for maritime operations.</p>
+            <ul>
+              <li>Environmental Compliance</li>
+              <li>Waste Management Systems</li>
+              <li>Spill Prevention & Response</li>
+              <li>Sustainable Practices</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <i class="fas fa-chart-line"></i>
+            <h3>Operations Optimization</h3>
+            <p>Streamline your maritime operations for maximum efficiency and profitability.</p>
+            <ul>
+              <li>Process Improvement</li>
+              <li>Resource Management</li>
+              <li>Performance Metrics</li>
+              <li>Best Practices Implementation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="maritime-resources">
+      <div class="container">
+        <h2>Resources</h2>
+        <div class="resources-grid">
+          <div class="resource-card">
+            <i class="fas fa-file-pdf"></i>
+            <h3>Rate Schedule</h3>
+            <p>View our current rates for maritime services</p>
+            <div class="table-container">
+              <table class="rates-table">
+                <thead>
+                  <tr>
+                    <th>Service</th>
+                    <th>Rate</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Corporate Training</td>
+                    <td>$200/hr</td>
+                  </tr>
+                  <tr>
+                    <td>Safety Advisory</td>
+                    <td>$250/hr</td>
+                  </tr>
+                  <tr>
+                    <td>Pollution Prevention</td>
+                    <td>$300/hr</td>
+                  </tr>
+                  <tr>
+                    <td>Operations Optimization</td>
+                    <td>$220/hr</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <a href="#" class="btn">Download PDF</a>
+          </div>
+          <div class="resource-card">
+            <i class="fas fa-file-pdf"></i>
+            <h3>Services Overview</h3>
+            <p>Detailed information about our maritime services</p>
+            <a href="#" class="btn">Download PDF</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications">
+      <div class="container">
+        <h2>Certifications & Affiliations</h2>
+        <div class="cert-grid">
+          [Your maritime certifications and affiliations here]
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-form-section">
+      <div class="container">
+        <iframe 
+          data-tally-src="https://tally.so/embed/nrG2M5?transparentBackground=1&dynamicHeight=1&alignLeft1" 
+          loading="lazy" 
+          width="100%" 
+          height="476" 
+          frameborder="0" 
+          marginheight="0" 
+          marginwidth="0" 
+          title="Contact SEADOG">
+        </iframe>
+        <script>
+          var d=document,w="https://tally.so/widgets/embed.js",
+          v=function(){
+            if(typeof Tally!="undefined"){Tally.loadEmbeds();}
+            else {
+              d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e){
+                e.src=e.dataset.tallySrc;
+              });
+            }
+          };
+          if(typeof Tally!="undefined") v();
+          else if(d.querySelector('script[src="'+w+'"]')==null){
+            var s=d.createElement("script");
+            s.src=w;
+            s.onload=v;
+            s.onerror=v;
+            d.body.appendChild(s);
+          }
+        </script>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Sea Dog Service</h4>
+          <p>Professional maritime and community services</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="maritime.html">Maritime Services</a></li>
+            <li><a href="community.html">Community Services</a></li>
+            <li><a href="https://blog.seadogservice.com">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <p>[Your contact information]</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Sea Dog Service. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
