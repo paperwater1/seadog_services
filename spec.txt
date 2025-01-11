@@ -1,0 +1,18 @@
+Hey there, I need a webpage built for my dad's personal business. I'm going to have him describe the business here:
+
+Description:
+
+My business is called Sea Dog Service. It's a bifurcated service, a DBA, that I use for two particular lines of business. One line is maritime related and the other is community related. In the maritime business, I provide various services to the industry, including corporate training and pollution and safety advisory services and general services as an independent marine consultant. I would like to be able to have persons see those lines of business and to download from each of those particular lines documents that I may have stored or to request a proposal or to see a rate schedule, et cetera, on that. In the community association or community line of the business, I would like people to once again see the services I offer, which are inspectors of election, general consulting for business management of associations, and I also am a notary public, so I would like people to be able to solicit proposals, maybe see some of my writings, et cetera, and maybe a fee schedule related to that business and others. I would like to be able to blog from each of those sites.
+
+Based on the above description, I want you to first come up with a list of clarifying questions that will help you to build a site most accurate to what he needs here.
+
+Note from my dad:
+
+I would like to incorporate my dog into the brand. My general colors that I like to use are navy blue, of course, and navy gold, and some lighter blues, gray themes. The imagery that I like in my business mostly relates to tankers, tank ships, and natural gas ships, so something along those lines on the maritime side. From the community side, I relate to homeowners associations, single-family units, and condominiums. I would prefer a professional look, but I like the warm, community-oriented feel, even for the maritime aspect of it. I only have about maybe a dozen documents for download in each section. Some documents might need to be gated, say two of each on each side. The documents will traditionally be in PDF rather than Word. They might be photos. I may have a standardized proposal request form. I think I need space for that, but I may just have reach out by email and phone, so I need to have both ways there. I don't have any particular testimonials from past clients. There should be separate contact forms for maritime and community services. Blogs would probably be posted periodically, not more frequently than every few days, possibly as long as a week and a half to two weeks. Yes, I need to categorize the blogs between maritime and community. I would like to allow comment on the blog post, but I want to monitor those comments. Pricing should be publicly visible. I want to include package options for different services. These rates might need to be updated, oh, not more frequently than every six months. I would like to include certifications, licenses, or professional affiliations for each of those sides, maritime and community. I have no case studies that I'd like to feature. There are specific qualifications that should be highlighted for each service area.
+
+This is a note from his son who is helping him with this. For the blog aspect, we should probably use something like sub-stack and have a sub-domain out to it because we don't want to have to build an entire CMS system for this.
+
+Please focus on making this a simple site where my dad can fill in the text details of services, prices, and so on.
+
+We will use something like substack and a subdomain for the blog aspect.
+

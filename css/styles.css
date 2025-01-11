@@ -90,8 +90,11 @@
   .container {
     width: 100%;
     max-width: 100%;
-    padding: 0 1rem;
     margin: 0 auto;
+  }
+  
+  .service-container {
+    padding: 1rem;
   }
   
   /* HERO sections */
@@ -196,6 +199,7 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     color: var(--navy-blue);
     background-color: var(--navy-gold);
+    white-space: nowrap;
     border: none;
   }
   
@@ -227,7 +231,7 @@
   @media (min-width: 768px) {
     .container {
       max-width: 720px;
-      padding: 0 2rem;
+      padding: 0 1rem;
     }
     .main-logo {
       max-width: 320px;
@@ -460,7 +464,7 @@
   
   /* Services detail section (same class as on maritime/community) */
   .services-detail {
-    padding: 2rem 0;
+    padding: 0 0;
     background-color: var(--light-gray);
     width: 100%;
     overflow: hidden;
