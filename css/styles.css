@@ -55,14 +55,7 @@
     font-size: 16px;
   }
   
-  .page-logo {
-    width: 100px;
-    height: auto;
-    margin-left: auto;
-    margin-right: 1rem;
-    /* Keep it from going offscreen on super small phones */
-    max-width: 90%;
-  }
+  /* Logo styles removed */
   
   /* Reduce overhead on smaller screens */
   @media (max-width: 768px) {
