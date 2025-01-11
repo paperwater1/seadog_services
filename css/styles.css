@@ -151,8 +151,18 @@
   .main-logo {
     width: auto;
     height: auto;
-    max-width: 300px;
-    filter: drop-shadow(0 10px 20px rgba(0, 51, 102, 0.3));
+    max-width: 375px;
+    filter: drop-shadow(0 10px 20px rgba(0, 51, 102, 0.3)) drop-shadow(0 0 30px rgba(179, 217, 255, 0.5));
+    animation: glow 3s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    from {
+      filter: drop-shadow(0 10px 20px rgba(0, 51, 102, 0.3)) drop-shadow(0 0 30px rgba(179, 217, 255, 0.5));
+    }
+    to {
+      filter: drop-shadow(0 10px 20px rgba(0, 51, 102, 0.3)) drop-shadow(0 0 50px rgba(179, 217, 255, 0.8));
+    }
   }
   
   .hero-content h1 {
