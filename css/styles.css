@@ -389,6 +389,16 @@
     border-radius: 12px;
     color: var(--gray);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+  }
+
+  .rate-title {
+    color: var(--navy-blue);
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
   
   /* Table in the rate schedule */
