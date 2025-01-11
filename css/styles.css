@@ -388,9 +388,9 @@
 
   /* Services Rates Table */
   .rates-table {
-    width: 100%;
-    max-width: 100%;
-    margin: 3rem 0;
+    width: 100vw;
+    margin-left: -1rem;
+    margin-right: -1rem;
     border-collapse: collapse;
     background: white;
     border-radius: 0;
@@ -429,10 +429,13 @@
 
   @media (min-width: 768px) {
     .rates-table {
+      width: 100%;
       max-width: 1000px;
       margin: 3rem auto;
       border-radius: 12px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      margin-left: auto;
+      margin-right: auto;
     }
   }
   
